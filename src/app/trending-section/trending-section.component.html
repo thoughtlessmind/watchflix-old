@@ -1,0 +1,12 @@
+<div class="trending-section-contianer">
+  <h3>Trending Movies</h3>
+  <div class="trending-cards-wrapper">
+    <ng-container *ngIf="trendingShows.length">
+      <div class="media-card" *ngFor="let show of trendingShows">
+        <img  src= "https://image.tmdb.org/t/p/w500{{show?.poster_path}}" />
+        <p>{{show.title || show.name}}</p>
+      </div>
+    </ng-container>
+  </div>
+
+</div>
