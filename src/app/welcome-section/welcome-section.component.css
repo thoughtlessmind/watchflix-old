@@ -1,0 +1,103 @@
+.welcome-section-container {
+  height: 40vh;
+  min-height: 300px;
+  padding: 24px 0;
+  --slide-up-transition: transform 400ms ease-in-out;
+  --search-submit-btn-gap: 2px;
+}
+
+.section-content-wrapper {
+  transform: translateY(0%);
+  transition: var(--slide-up-transition);
+  width: 66.66%;
+}
+
+.section-content-wrapper:focus-within {
+  transform: translateY(-140px);
+}
+.section-content-wrapper:focus-within .text-container {
+  transform: translateY(-20%);
+  transition: var(--slide-up-transition);
+}
+
+.section-content-wrapper:focus-within .suggestion-list {
+  display: block;
+}
+
+.text-container {
+  color: #fff;
+}
+
+.text-container > h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+
+.text-container > h5 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.form-wrapper {
+  transition: var(--slide-up-transition);
+  transform: translateY(0);
+  padding: 30px 0;
+}
+
+.form-container {
+  position: relative;
+}
+.form-container #searchBox {
+  width: 100%;
+}
+
+#searchBox {
+  padding: 12px 32px;
+  border-radius: 999999px;
+  border: none;
+}
+
+.search-submit-btn {
+  display: inline-flex;
+  position: absolute;
+  top: var(--search-submit-btn-gap);
+  right: var(--search-submit-btn-gap);
+  border-radius: 999999px;
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+  height: calc(100% - (2 * var(--search-submit-btn-gap)));
+  width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.suggestion-list {
+  list-style-type: none;
+  padding: 6px 12px;
+  background-color: var(--main-bg-color);
+  margin-top: -12px;
+  padding-top: 20px;
+  border-radius: var(--rounded);
+  display: none;
+}
+
+.suggestion-list li {
+  color: #fff;
+  padding: 12px 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--rounded);
+  transition: color var(---short-transition-time),
+    background-color var(--short-transition-time);
+}
+
+.suggestion-list li:hover {
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+  font-weight: 500;
+}

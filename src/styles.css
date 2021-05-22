@@ -4,7 +4,11 @@
   --header-height: 60px;
   --primary-color: #f5c518;
   --main-bg-color: #131b23;
-  --main-bg-color-2: #142638
+  --main-bg-color-2: #142638;
+  --z-index-header: 20;
+  --rounded: 5px;
+  --normal-transition-time: 200ms;
+  --short-transition-time: 100ms;
 }
 
 *,
@@ -17,4 +21,8 @@ body {
 
 [role="button"] {
   cursor: pointer;
+}
+
+input:focus{
+  outline: none;
 }
