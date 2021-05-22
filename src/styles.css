@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --header-height: 60px;
+  --primary-color: #f5c518;
+  --main-bg-color: #131b23;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+[role="button"] {
+  cursor: pointer;
+}

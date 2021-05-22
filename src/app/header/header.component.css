@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  width: 100vw;
+  height: var(--header-height);
+  background-color: var(--main-bg-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 24px;
+}
+
+nav a {
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: color 100ms, background-color 100ms;
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+}
