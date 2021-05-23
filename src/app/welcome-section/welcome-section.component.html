@@ -22,11 +22,11 @@
         <input type="submit" class="search-submit-btn" value="Search">
       </form>
       <ul class="suggestion-list">
-          <!-- <ng-template *ngIf="suggestions$.hasOwnProperty('results')"> -->
-            <li *ngFor="let suggestion of suggestions$ | async">
-              {{suggestion.title}}
+          <ng-template *ngFor="let key of suggestions$ | async">
+            <li *ngFor="let suggestion of key.results">
+              {{suggestion.title || suggestion.name}}
             </li>
-          <!-- </ng-template> -->
+          </ng-template>
         <!-- <li>Movie 1</li>
         <li>Movie 1</li>
         <li>Movie 1</li>

@@ -26,6 +26,7 @@ nav a {
   font-weight: 500;
   padding: 8px 16px;
   transition: color 100ms, background-color 100ms;
+  text-decoration: none;
 }
 
 nav a:hover {

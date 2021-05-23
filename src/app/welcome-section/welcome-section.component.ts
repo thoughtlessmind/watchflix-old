@@ -9,7 +9,7 @@ import { SearchService } from '../search.service';
   styleUrls: ['./welcome-section.component.css'],
 })
 export class WelcomeSectionComponent implements OnInit {
-  suggestions$!: Observable<any[]>;
+  suggestions$!: Observable<any>;
 
   private searchTerms = new Subject<string>();
 
