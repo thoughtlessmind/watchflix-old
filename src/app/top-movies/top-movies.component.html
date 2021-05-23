@@ -1,11 +1,11 @@
 <div>
   <div class="movies-card-wrapper" >
     <app-media-card
-    *ngFor="let show of trendingMovies"
-      [bannerUrl]="show.poster_path"
-      [name]="show.title || show.name"
-      [mediaType]="show.media_type"
-      [id]="show.id"
+    *ngFor="let movie of trendingMovies"
+      [bannerUrl]="movie.poster_path"
+      [name]="movie.title || movie.name"
+      [mediaType]="movie.media_type"
+      [id]="movie.id"
     >
     </app-media-card>
   </div>

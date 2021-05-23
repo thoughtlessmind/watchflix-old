@@ -1,1 +1,12 @@
-<p>top-shows works!</p>
+<div>
+  <div class="movies-card-wrapper" >
+    <app-media-card
+    *ngFor="let show of trendingShows"
+      [bannerUrl]="show.poster_path"
+      [name]="show.title || show.name"
+      [mediaType]="show.media_type"
+      [id]="show.id"
+    >
+    </app-media-card>
+  </div>
+</div>
