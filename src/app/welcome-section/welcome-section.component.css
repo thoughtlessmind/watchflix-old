@@ -48,11 +48,11 @@
 .form-container {
   position: relative;
 }
-.form-container #searchBox {
+.form-container #search-box {
   width: 100%;
 }
 
-#searchBox {
+#search-box {
   padding: 12px 32px;
   border-radius: 999999px;
   border: none;

@@ -8,24 +8,29 @@
       <form class="form-container">
         <label>
           <input
-            name="query"
-            type="search"
             tabIndex="1"
             autoCorrect="off"
             autofill="off"
             autoComplete="off"
             spellCheck="false"
-            id="searchBox"
+            id="search-box"
+            #searchBox
             placeholder="Search for a movie, tv show, person......"
+            (input)="searchSuggestions(searchBox.value)"
           />
         </label>
         <input type="submit" class="search-submit-btn" value="Search">
       </form>
       <ul class="suggestion-list">
+          <!-- <ng-template *ngIf="suggestions$.hasOwnProperty('results')"> -->
+            <li *ngFor="let suggestion of suggestions$ | async">
+              {{suggestion.title}}
+            </li>
+          <!-- </ng-template> -->
+        <!-- <li>Movie 1</li>
         <li>Movie 1</li>
         <li>Movie 1</li>
-        <li>Movie 1</li>
-        <li>Movie 1</li>
+        <li>Movie 1</li> -->
       </ul>
     </div>
   </div>
