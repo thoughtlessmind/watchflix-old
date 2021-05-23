@@ -8,12 +8,12 @@ import { TopMoviesComponent } from './top-movies/top-movies.component';
 import { TopShowsComponent } from './top-shows/top-shows.component';
 
 const routes: Routes = [
-  {path:'top-movies', component:TopMoviesComponent},
   {path:'', component: LandingPageComponent},
+  {path:'top-movies', component:TopMoviesComponent},
   {path:'top-shows', component: TopShowsComponent},
   {path: 'discover', component:DiscoverComponent},
   {path: 'movie/:id', component:SingleMovieComponent},
-  {path: 'show/:id', component:SingleShowComponent},
+  {path: 'tv/:id', component:SingleShowComponent},
 ];
 
 @NgModule({

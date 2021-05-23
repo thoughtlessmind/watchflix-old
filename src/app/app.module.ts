@@ -13,6 +13,7 @@ import { TopShowsComponent } from './top-shows/top-shows.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { SingleShowComponent } from './single-show/single-show.component';
+import { MediaCardComponent } from './media-card/media-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SingleShowComponent } from './single-show/single-show.component';
     TopShowsComponent,
     DiscoverComponent,
     SingleMovieComponent,
-    SingleShowComponent
+    SingleShowComponent,
+    MediaCardComponent
   ],
   imports: [
     BrowserModule,

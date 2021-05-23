@@ -2,11 +2,20 @@
   <h3>Trending Movies</h3>
   <div class="trending-cards-wrapper">
     <ng-container *ngIf="trendingShows.length">
-      <div class="media-card" *ngFor="let show of trendingShows">
+      <!-- <div class="media-card" *ngFor="let show of trendingShows">
         <img  src= "https://image.tmdb.org/t/p/w500{{show?.poster_path}}" />
         <p>{{show.title || show.name}}</p>
+        
+      </div> -->
+      <div *ngFor="let show of trendingShows">
+        <app-media-card
+          [bannerUrl]="show.poster_path"
+          [name]='show.title || show.name'
+          [mediaType]="show.media_type"
+          [id]="show.id"
+        >
+        </app-media-card>
       </div>
     </ng-container>
   </div>
-
 </div>
