@@ -2,5 +2,8 @@
   <div class="image-wrapper">
     <img src="https://image.tmdb.org/t/p/w500{{ bannerUrl }}" />
   </div>
-  <p>{{ name }}</p>
+  <div class="text-info-contianer">
+    <p class="title">{{ name }}</p>
+    <span class="year">{{getYear(releaseDate)}}</span>
+  </div>
 </div>

@@ -10,10 +10,17 @@ export class MoviesService {
   trendingMoviesUrl =
     'https://api.themoviedb.org/3/trending/movie/day?page=1&api_key=555b6d37996849e85d8e21029c5e41f3';
 
+  /**
+   * Fetch tending movies of the day
+   */
   getTredingMovies() {
     return this.http.get<any>(this.trendingMoviesUrl);
   }
 
+  /**
+   * Fetch single movie details
+   * @param id Movie id
+   */
   getSingleMovieDetails(id: string | number) {
     const url = `${this.baseUrl}/movie/${id}?${this.key}&append_to_response=images,videos,credits,certification,watch%2Fproviders&`;
     return this.http.get<any>(url);

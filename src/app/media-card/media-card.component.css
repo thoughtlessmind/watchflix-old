@@ -25,3 +25,18 @@
 .image-wrapper img:hover{
   transform: scale(1.1);
 }
+
+.text-info-contianer {
+  /* display: flex; */
+  height: 20%;
+  padding: 10px 8px;
+}
+
+.text-info-contianer .title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.text-info-contianer .year {
+  font-size: 12px;
+}

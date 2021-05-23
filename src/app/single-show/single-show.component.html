@@ -1,1 +1,63 @@
-<p>single-show works!</p>
+<div *ngIf="showDetails" class="show-page-container">
+  <div class="bgWrapper" [ngStyle]="sectionBgCss"></div>
+  <div class="uppper-section-wrapper">
+    <div class="banner-section">
+      <img src="https://image.tmdb.org/t/p/w500{{ showDetails.poster_path }}" />
+    </div>
+    <div class="overview-section">
+      <h3 class="title">
+        {{ showDetails.name }}
+        <span>({{ getShowYear(showDetails.first_air_date) }})</span>
+      </h3>
+      <p title="tagline" class="tagline">{{ showDetails.tagline }}</p>
+      <div class="info-strip">
+        <!-- <span class="rating" *ngIf="showDetails.adult"> R </span>
+        <span class="rating" *ngIf="showDetails.adult === false"> U </span>
+        &#8226; -->
+        <time title="First air date">
+          {{ showDetails.first_air_date }}
+        </time>
+        &#8226;
+        <span title="Rating">
+          {{ showDetails.vote_average }}
+        </span>
+        &#8226;
+        <span>
+          <a title="Genre" *ngFor="let genre of showDetails.genres.slice(0, 3)">
+            {{ genre.name }}
+          </a>
+        </span>
+        &#8226;
+        <span title="Total Seasons">
+          {{ showDetails.number_of_seasons }} Seasons
+        </span>
+      </div>
+
+      <div class="movie-overview">
+        <p class="section-lable">Overview</p>
+        <p class="overview-text">
+          {{ showDetails.overview }}
+        </p>
+      </div>
+
+      <div class="seasons-card-wrapper">
+        <div
+          *ngFor="let season of showDetails.seasons"
+          class="director-wrapper"
+        >
+          <img
+            src="https://image.tmdb.org/t/p/w500{{ season.poster_path }}"
+            class="profile-pic"
+          />
+          <div class="text-info-container">
+            <p class="director-name">
+              {{ season.name }}
+              <span>({{ getShowYear(season.air_date) }})</span>
+            </p>
+            <p>{{ season.episode_count }} Episodes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

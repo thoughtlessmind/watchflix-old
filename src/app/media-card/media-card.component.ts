@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MediaCardComponent implements OnInit {
   @Input() bannerUrl: string = '';
   @Input() name: string = '';
-  @Input() mediaType:string = '';
-  @Input() id:string = '';
+  @Input() mediaType: string = '';
+  @Input() id: string = '';
+  @Input() releaseDate: string = '';
 
   constructor() {}
+
+  getYear(releaseDate: string) {
+    return releaseDate ? new Date(releaseDate).getFullYear() : '';
+  }
 
   ngOnInit(): void {}
 }

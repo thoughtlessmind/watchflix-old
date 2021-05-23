@@ -1,0 +1,14 @@
+@import url('../single-movie/single-movie.component.css');
+
+.seasons-card-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.seasons-card-wrapper .director-name > span {
+  font-weight: normal;
+  font-size: 12px;
+  margin-left: 4px;
+}

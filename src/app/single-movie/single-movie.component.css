@@ -1,12 +1,10 @@
-.movie-page-container {
-  /* position: relative; */
-}
 .uppper-section-wrapper {
   display: flex;
   gap: 20px;
-  height: 80vh;
+  min-height: 80vh;
   color: var(--text-color-main);
   position: relative;
+  overflow-x: hidden;
 }
 
 .banner-section {
@@ -101,7 +99,7 @@
 }
 
 .movie-overview{
-  margin-top: 32px;
+  margin: 32px 0;
   opacity: 0.9;
 }
 
@@ -120,9 +118,10 @@
   align-items: flex-start;
   border-radius: var(--rounded);
   overflow:hidden;
-  margin-top: 32px;
+  /* margin-top: 32px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* gap:12px; */
-  background-color: var(--main-bg-color-2);
+  background-color: var(--main-bg-color);
   opacity: 0.7;
 }
 
@@ -133,8 +132,14 @@
 }
 
 .director-wrapper > .text-info-container {
-  padding:8px;
+  padding: 8px;
   padding-right: 16px;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 4px;;
 }
 
 .director-name {
