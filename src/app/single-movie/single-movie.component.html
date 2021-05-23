@@ -1,1 +1,56 @@
-<p>single-movie works!</p>
+<div *ngIf="movieDetails" class="movie-page-container">
+  <div class="bgWrapper" [ngStyle]="sectionBgCss"></div>
+
+  <div class="uppper-section-wrapper">
+    <div class="banner-section">
+      <img
+        src="https://image.tmdb.org/t/p/w500{{ movieDetails.poster_path }}"
+      />
+    </div>
+    <div class="overview-section">
+      <h3 class="title">
+        {{ movieDetails.title }}
+        <span>({{ getMovieYear(movieDetails.release_date) }})</span>
+      </h3>
+      <p class="tagline">{{ movieDetails.tagline }}</p>
+      <div class="info-strip">
+        <span class="rating" *ngIf="movieDetails.adult"> R </span>
+        <span class="rating" *ngIf="movieDetails.adult === false"> U </span>
+        &#8226;
+        <time>
+          {{ movieDetails.release_date }}
+        </time>
+        &#8226;
+        <span>
+          {{ movieDetails.vote_average }}
+        </span>
+        &#8226;
+        <span>
+          <a *ngFor="let genre of movieDetails.genres.slice(0, 3)">
+            {{ genre.name }}
+          </a>
+        </span>
+        &#8226;
+        <span> {{ movieDetails.runtime }} Min </span>
+      </div>
+
+      <div class="movie-overview">
+        <p class="section-lable">Overview</p>
+        <p class="overview-text">
+          {{ movieDetails.overview }}
+        </p>
+      </div>
+
+      <div *ngIf="director" class="director-wrapper">
+        <img
+          src="https://image.tmdb.org/t/p/w500{{ director.profile_path }}"
+          class="profile-pic"
+        />
+        <div class="text-info-container">
+          <p class="director-name">{{director.name}}</p>
+          <p>Director</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

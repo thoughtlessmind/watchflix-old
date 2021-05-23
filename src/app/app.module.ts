@@ -27,7 +27,7 @@ import { MediaCardComponent } from './media-card/media-card.component';
     DiscoverComponent,
     SingleMovieComponent,
     SingleShowComponent,
-    MediaCardComponent
+    MediaCardComponent,
   ],
   imports: [
     BrowserModule,
