@@ -1,6 +1,12 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { debounce, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import {
+  debounce,
+  debounceTime,
+  distinctUntilChanged,
+  switchMap,
+} from 'rxjs/operators';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -13,11 +19,19 @@ export class WelcomeSectionComponent implements OnInit {
 
   private searchTerms = new Subject<string>();
 
-  constructor(private searchService: SearchService) {}
+  constructor(
+    private searchService: SearchService,
+    private vpScroller: ViewportScroller
+  ) {}
 
   searchSuggestions(term: string): void {
-    console.log('asdfas', term)
+    console.log('asdfas', term);
     this.searchTerms.next(term);
+  }
+
+  searchInputFocued(): void {
+    console.log('------');
+    this.vpScroller.scrollToPosition([0, 0]);
   }
 
   ngOnInit(): void {

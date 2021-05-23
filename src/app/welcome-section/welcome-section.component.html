@@ -17,6 +17,7 @@
             #searchBox
             placeholder="Search for a movie, tv show, person......"
             (input)="searchSuggestions(searchBox.value)"
+            (focus)="searchInputFocued()"
           />
         </label>
         <input type="submit" class="search-submit-btn" value="Search">
