@@ -47,10 +47,24 @@
           class="profile-pic"
         />
         <div class="text-info-container">
-          <p class="director-name">{{director.name}}</p>
+          <p class="director-name">{{ director.name }}</p>
           <p>Director</p>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div *ngIf="movieDetails" class="casts-container">
+  <h3>Top Billed Casts</h3>
+  <div class="cast-cards-wrapper">
+    <app-person-card
+      *ngFor="let cast of movieDetails.credits.cast.slice(0,10)"
+      [profilePic]="cast.profile_path"
+      [name]="cast.name"
+      [character]="cast.character"
+    >
+    </app-person-card>
+
   </div>
 </div>

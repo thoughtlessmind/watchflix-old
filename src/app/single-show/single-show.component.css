@@ -1,5 +1,9 @@
 @import url('../single-movie/single-movie.component.css');
 
+.show-page-container{
+  height: 100vh;
+}
+
 .seasons-card-wrapper{
   display: flex;
   align-items: center;

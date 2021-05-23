@@ -14,6 +14,7 @@ import { DiscoverComponent } from './discover/discover.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { SingleShowComponent } from './single-show/single-show.component';
 import { MediaCardComponent } from './media-card/media-card.component';
+import { PersonCardComponent } from './person-card/person-card.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MediaCardComponent } from './media-card/media-card.component';
     SingleMovieComponent,
     SingleShowComponent,
     MediaCardComponent,
+    PersonCardComponent,
   ],
   imports: [
     BrowserModule,

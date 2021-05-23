@@ -1,3 +1,7 @@
+.movie-page-container{
+  height: 100vh;
+}
+
 .uppper-section-wrapper {
   display: flex;
   gap: 20px;
@@ -48,6 +52,7 @@
 .info-strip {
   margin-top: 12px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
@@ -70,7 +75,7 @@
   background-repeat: no-repeat;
   background-position: center;
   color: #000;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
@@ -150,4 +155,20 @@
 
 .text-info-container > p:last-child{
   font-size: 14px;
+}
+
+.casts-container{
+  margin-top: 12px;
+}
+.casts-container h3{
+  font-size: 1.4em;
+  color: #fff;
+  margin-bottom: 32px;
+  font-weight: normal;
+}
+.cast-cards-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }

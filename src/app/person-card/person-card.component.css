@@ -1,0 +1,31 @@
+.person-card-container{
+  width: 150px;
+  height: 250px;
+  border-radius: var(--rounded);
+  overflow: hidden;
+  background-color: var(--main-bg-color);
+  color: var(--text-color-main);
+}
+
+.person-card-container .profile-pic {
+  width: 100%;
+  height: 75%;
+  border-radius: var(--rounded);
+  object-fit: cover;
+}
+
+.info-container {
+  height: 25%;
+  padding: 10px 8px;
+}
+
+.info-container .name {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.info-container .role {
+  font-weight: normal;
+  font-size: 12px;
+  opacity: 0.8;
+}
