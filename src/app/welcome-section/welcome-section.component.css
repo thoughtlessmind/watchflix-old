@@ -21,7 +21,7 @@
 }
 
 .section-content-wrapper:focus-within .suggestion-list {
-  display: block;
+  /* display: block; */
 }
 
 .text-container {
@@ -83,7 +83,9 @@
   margin-top: -12px;
   padding-top: 20px;
   border-radius: var(--rounded);
-  display: none;
+  /* display: none; */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .suggestion-list li {
@@ -94,7 +96,25 @@
   border-radius: var(--rounded);
   transition: color var(---short-transition-time),
     background-color var(--short-transition-time);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
 }
+
+.suggestion-list li .left-part{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+
+.suggestion-list li .left-part img {
+  height: 100%;
+  width: auto;
+}
+
 
 .suggestion-list li:hover {
   background-color: var(--primary-color);

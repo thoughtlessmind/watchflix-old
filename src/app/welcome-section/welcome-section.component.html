@@ -20,18 +20,23 @@
             (focus)="searchInputFocued()"
           />
         </label>
-        <input type="submit" class="search-submit-btn" value="Search">
+        <input type="submit" class="search-submit-btn" value="Search" />
       </form>
       <ul class="suggestion-list">
-          <ng-template *ngFor="let key of suggestions$ | async">
-            <li *ngFor="let suggestion of key.results">
-              {{suggestion.title || suggestion.name}}
-            </li>
-          </ng-template>
-        <!-- <li>Movie 1</li>
-        <li>Movie 1</li>
-        <li>Movie 1</li>
-        <li>Movie 1</li> -->
+        <li
+          routerLink="/{{ key.media_type }}/{{ key.id }}"
+          *ngFor="let key of results"
+        >
+          <span class="left-part">
+            <img src="https://image.tmdb.org/t/p/w200{{ key.poster_path }}" />
+            <span>
+              {{ key.title || key.name }}
+            </span>
+          </span>
+          <span class="right-part">
+            {{ getYear(key.release_date || key.first_air_date) }}
+          </span>
+        </li>
       </ul>
     </div>
   </div>
