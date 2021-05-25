@@ -21,7 +21,7 @@
 }
 
 .section-content-wrapper:focus-within .suggestion-list {
-  /* display: block; */
+  display: block;
 }
 
 .text-container {
@@ -83,7 +83,7 @@
   margin-top: -12px;
   padding-top: 20px;
   border-radius: var(--rounded);
-  /* display: none; */
+  display: none;
   max-height: 200px;
   overflow-y: auto;
 }
