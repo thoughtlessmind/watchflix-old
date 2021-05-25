@@ -28,7 +28,7 @@
           *ngFor="let key of results"
         >
           <span class="left-part">
-            <img src="https://image.tmdb.org/t/p/w200{{ key.poster_path }}" />
+            <img src="https://image.tmdb.org/t/p/w200{{ key.poster_path || key.profile_path }}" />
             <span>
               {{ key.title || key.name }}
             </span>

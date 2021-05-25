@@ -1,0 +1,29 @@
+<div class="profile-page-wrapper">
+  <div class="main-info-section">
+    <div class="profile-image-wrapper">
+      <img
+        src="https://image.tmdb.org/t/p/w500{{ personInfo.profile_path }}"
+        class="profile"
+        alt=""
+      />
+    </div>
+    <div class="left-section-wrapper">
+      <h3 class="person-name">
+        {{personInfo.name}}
+      </h3>
+      <p class="known-for">
+        {{personInfo.known_for_department}}
+      </p>
+
+      <div class="biography-section">
+        <h3 class="heading">
+          Biography
+        </h3>
+
+        <p class="text" >
+          {{personInfo.biography}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

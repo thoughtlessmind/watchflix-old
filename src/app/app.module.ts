@@ -15,6 +15,7 @@ import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { SingleShowComponent } from './single-show/single-show.component';
 import { MediaCardComponent } from './media-card/media-card.component';
 import { PersonCardComponent } from './person-card/person-card.component';
+import { PersonPageComponent } from './person-page/person-page.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { PersonCardComponent } from './person-card/person-card.component';
     SingleShowComponent,
     MediaCardComponent,
     PersonCardComponent,
+    PersonPageComponent,
   ],
   imports: [
     BrowserModule,

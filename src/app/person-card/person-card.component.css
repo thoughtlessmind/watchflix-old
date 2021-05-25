@@ -5,6 +5,7 @@
   overflow: hidden;
   background-color: var(--main-bg-color);
   color: var(--text-color-main);
+  cursor: pointer;
 }
 
 .person-card-container .profile-pic {
