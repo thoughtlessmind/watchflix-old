@@ -1,16 +1,25 @@
 <div class="trending-section-contianer">
   <h3>Trending Movies</h3>
-  <div class="trending-cards-wrapper">
+  <div (scroll)="manageScrollButtons()" class="trending-cards-wrapper" id="scrollContainer">
+    <button
+      class="scroll-button left hide"
+      id="leftScroll"
+      (click)="scrollRight('left')"
+    >
+      &#60;
+    </button>
+    <button
+      class="scroll-button right"
+      id="rightScroll"
+      (click)="scrollRight('right')"
+    >
+      &#62;
+    </button>
     <ng-container *ngIf="trendingShows.length">
-      <!-- <div class="media-card" *ngFor="let show of trendingShows">
-        <img  src= "https://image.tmdb.org/t/p/w500{{show?.poster_path}}" />
-        <p>{{show.title || show.name}}</p>
-        
-      </div> -->
       <div *ngFor="let show of trendingShows">
         <app-media-card
           [bannerUrl]="show.poster_path"
-          [name]='show.title || show.name'
+          [name]="show.title || show.name"
           [mediaType]="show.media_type"
           [id]="show.id"
           [releaseDate]="show.release_date || show.first_air_date"
